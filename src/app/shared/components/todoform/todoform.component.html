@@ -1,0 +1,10 @@
+<form #todoform="ngForm" (ngSubmit)="toDoAdd()">
+    <div class="form-group">
+        <label for="todoitem" class="text-white font-weight-bold">ToDoInput *</label>
+        <input type="text" ngModel #todoitem="ngModel" required name="todoitem" id="todoitem" class="form-control">
+        <span class="text-danger" *ngIf="todoitem.touched && todoitem.invalid">
+            ToDoInput is a required field.
+        </span>
+    </div>
+    <button class="btn btn-info btn-block btn-sm">Submit</button>
+</form>

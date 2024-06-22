@@ -1,0 +1,22 @@
+<h1 class="p-2 text-white text-uppercase todoheading">ToDo-Student Task</h1>
+<div class="container p-4 division-border">
+  <div class="row">
+    <div class="col-md-6 mb-4 mb-md-0">
+      <app-todoform (postToDoItem)="postToDo($event)"></app-todoform>
+    </div>
+    <div class="col-md-6">
+      <app-todolist [getToDoList]="todoArr"></app-todolist>
+    </div>
+  </div>
+</div>
+
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-6">
+      <app-stdform (postTable)="postTableData($event)"></app-stdform>
+    </div>
+    <div class="col-md-6">
+      <app-stdlist [getStdTable]="stdArr"></app-stdlist>
+    </div>
+  </div>
+</div>

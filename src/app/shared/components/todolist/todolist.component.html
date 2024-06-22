@@ -1,0 +1,9 @@
+<label class="text-white font-weight-bold">ToDOList</label>
+<ul class="list-group" *ngIf="getToDoList.length > 0; else noList">
+    <li class="list-group-item" *ngFor="let todo of getToDoList">{{todo.todoitem}}</li>
+</ul>
+<ng-template #noList>
+    <p class="alert alert-info">
+        No List to display
+    </p>
+</ng-template>
